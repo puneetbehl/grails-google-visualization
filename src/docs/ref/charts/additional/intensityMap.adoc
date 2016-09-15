@@ -1,0 +1,23 @@
+[[intensityMap]]
+=== Intensity Map
+
+[source, groovy]
+.VisualizationController.groovy
+----
+class VisualizationController {
+  def intensityMap() {
+   def popularityColumns = [['string', 'Country'], ['number', 'Popularity']]
+   def popularityData = [['Germany', 200], ['United States', 300], ['Brazil', 400], ['Canada', 500], ['France', 600], ['RU', 700]]
+   render template: "intensityMap", model: ["populationColumns": populationColumns, "populationData": populationData]
+  }
+}
+----
+
+[source, groovy]
+._intensityMap.gsp
+----
+<gvisualization:intensityMap elementId="intensitymap" columns="${populationColumns}" data="${populationData}" />
+
+
+<div id="intensitymap"></div>
+----

@@ -1,0 +1,23 @@
+[[map]]
+=== Map
+
+[source, groovy]
+.VisualizationController.groovy
+----
+class VisualizationController {
+  def map() {
+   List mapColumns = [['number', 'Lat'], ['number', 'Lon'], ['string', 'Name']]
+   List mapData = [[37.4232, -122.0853, 'Work'], [37.4289, -122.1697, 'University'], [37.6153, -122.3900, 'Airport']
+   render template: "map", model: ["mapColumns": mapColumns, "mapData": mapData]
+  }
+}
+----
+
+[source, groovy]
+._map.gsp
+----
+<gvisualization:map elementId="map" columns="${mapColumns}" data="${mapData}" />
+
+
+<div id="map" style="width: 400px; height: 300px"></div>
+----

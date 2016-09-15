@@ -1,0 +1,23 @@
+[[lineChart]]
+=== Line Chart
+
+[source, groovy]
+.VisualizationController.groovy
+----
+class VisualizationController {
+  def lineChart() {
+	List companyPerformanceColumns = [['string', 'Year'], ['number', 'Sales'], ['number', 'Expenses']]
+   	List companyPerformanceData = [['2004', 1000, 400], ['2005', 1170, 460], ['2006', 660, 1120], ['2007', 1030, 540]]
+   	render template: "lineChart", model: ["companyPerformanceData": companyPerformanceData, "companyPerformanceColumns": companyPerformanceColumns]
+  }
+}
+----
+
+
+[source, groovy]
+._lineChart.gsp
+----
+<gvisualization:lineCoreChart elementId="linechart" width="${400}" height="${240}" title="Company Performance" columns="${companyPerformanceColumns}" data="${companyPerformanceData}" />
+
+<div id="linechart"></div>
+----

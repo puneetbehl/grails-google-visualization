@@ -1,0 +1,24 @@
+[[table]]
+=== Table
+
+
+[source, groovy]
+.VisualizationController.groovy
+----
+class VisualizationController {
+  def table() {
+   List employeeColumns = [['string', 'Name'], ['string', 'Salary'], ['boolean', 'Full Time Employee']]
+   List employeeData = [['Mike', '$10,000', true], ['Jim', '$8,000', false], ['Alice', '$12,500', true], ['Bob', '$7,000', true]]
+   render template: "table", model: ["employeeColumns": employeeColumns, "employeeData": employeeData]
+  }
+}
+----
+
+[source, groovy]
+._table.gsp
+----
+<gvisualization:table elementId="table" width="${400}" height="${130}" columns="${employeeColumns}" data="${employeeData}" select="selectHandler" ready="readyHandler"/>
+
+
+<div id="table"></div>
+----

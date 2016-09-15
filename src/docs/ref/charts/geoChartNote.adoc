@@ -1,0 +1,16 @@
+[NOTE]
+====
+The Google Maps api that Google Charts uses to do geocoding of named locations has been updated several months ago (not sure
+how long) and the old uses appear to have been 'grandfathered' in without complaint. So, going forward we need to define API key as shown below while rendering Maps, GeoCharts etc.
+
+[source, yaml]
+.application.yml
+----
+google:
+    maps:
+        key: YOUR_API_KEY
+
+----
+
+To get a API key click https://developers.google.com/maps/documentation/javascript/get-api-key[here]
+====

@@ -1,0 +1,23 @@
+[[orgChart]]
+=== Org Chart
+
+[source, groovy]
+.VisualizationController.groovy
+----
+class VisualizationController {
+  def orgChart() {
+   def orgColumns = [['string', 'Name'], ['string', 'Manager'], ['string', 'ToolTip']]
+   def orgData = [[new Cell(value: 'Mike', label: 'Mike<div style="color:red; font-style:italic">President</div>'), '', 'The President'], [new Cell(value: 'Jim', label: 'Jim<div style="color:red; font-style:italic">Vice President<div>'), 'Mike', 'VP'], ['Alice', 'Mike', ''], ['Bob', 'Jim', 'Bob Sponge'], ['Carol', 'Bob', '']]
+   render template: "orgChart", model: ["orgColumns": orgColumns, "orgData": orgData]
+  }
+}
+----
+
+[source, groovy]
+._orgChart.gsp
+----
+<gvisualization:orgChart elementId="orgchart" allowHtml="${true}" columns="${orgColumns}" data="${orgData}" />
+
+
+<div id="orgchart"></div>
+----

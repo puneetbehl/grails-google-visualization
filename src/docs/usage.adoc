@@ -3,6 +3,8 @@
 
 include::usage/installation.adoc[]
 
+include::usage/configuration.adoc[]
+
 include::usage/basicUsage.adoc[]
 
 include::usage/events.adoc[]

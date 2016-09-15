@@ -1,0 +1,19 @@
+[[configuration]]
+=== Configuration
+
+To get started using the Google Maps JavaScript API, you need to define an API key in the application configuration as follows:
+
+[source, yaml]
+.application.yml
+----
+google:
+    maps:
+        key: YOUR_API_KEY
+
+----
+
+==== Get a Key/Authentication
+
+All Google Maps JavaScript API applications require authentication. Please https://developers.google.com/maps/documentation/javascript/get-api-key[click here] to read about authentication/key or to get an API key.
+
+

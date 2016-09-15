@@ -1,4 +1,4 @@
 [[examples]]
 == Examples
 
-include::ref/charts/pieCoreChart.adoc[]
+include::ref/charts.adoc[]

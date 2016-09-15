@@ -1,0 +1,28 @@
+[[dataTableRoles]]
+=== Data Table Roles
+
+[source, groovy]
+.VisualizationController.groovy
+----
+class VisualizationController {
+  def dataTableRoles() {
+   List dataTableRoleExampleColumns = [['string', 'Month'], ['number', 'Sales'], [type: 'number', role: 'interval'], [type:'number', role:'interval'], [type:'string', role:'annotation'], [type:'string', role:'annotationText'], [type:'boolean',role:'certainty']]
+   List dataTableRoleData = [
+           ['April',1000,  900, 1100,  'A','Stolen data', true],
+           ['May',  1170, 1000, 1200,  'B','Coffee spill', true],
+           ['June',  660,  550,  800,  'C','Wumpus attack', true],
+           ['July', 1030, null, null, null, null, false]
+   ]
+   render template: "dataTableRoles", model: ["dataTableRoleExampleColumns": dataTableRoleExampleColumns, "dataTableRoleData": dataTableRoleData]
+  }
+}
+----
+
+[source, groovy]
+._dataTableRoles.gsp
+----
+<gvisualization:lineCoreChart elementId="dataTableRoles" width="${400}" height="${240}" columns="${dataTableRoleExampleColumns}" data="${dataTableRoleData}" legend="${[position: 'top', alignment: 'center']}" />
+
+
+<div id="dataTableRoles"></div>
+----

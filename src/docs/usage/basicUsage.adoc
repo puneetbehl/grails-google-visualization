@@ -23,3 +23,54 @@
  legend="${[position: 'top', alignment: 'center']}"
  ----
  - If your data requires the usage of the http://code.google.com/apis/visualization/documentation/reference.html#cell_object[cell object] you can import and populate the class `org.grails.plugins.google.visualization.data.Cell`.
+
+
+=== Examples
+
+==== Rendering a visualization in a GSP
+
+[source, groovy]
+----
+<%
+def myDailyActivitiesColumns = [['string', 'Task'], ['number', 'Hours per Day']]
+def myDailyActivitiesData = [['Work', 11], ['Eat', 2], ['Commute', 2], ['Watch TV', 2], ['Sleep', 7]]
+%>
+
+<gvisualization:pieCoreChart elementId="piechart" title="My Daily Activities" width="${450}" height="${300}" columns="${myDailyActivitiesColumns}" data="${myDailyActivitiesData}" />
+
+<div id="piechart"></div>
+----
+
+==== Rendering a visualization in a AJAX response
+
+[source, html]
+.GSP (`grails-app/views/index.gsp`)
+----
+<input type="button" value="Render Pie Chart" onclick="${remoteFunction(controller:'visualization',action:'render',update:'chart')}">
+<br>
+<div id="chart"></div>
+----
+
+
+[source, groovy]
+.Controller (`grails-app/controllers/VisualizationController.groovy`)
+----
+class VisualizationController {
+  def render = {
+    def myDailyActivitiesColumns = [['string', 'Task'], ['number', 'Hours per Day']]
+    def myDailyActivitiesData = [['Work', 11], ['Eat', 2], ['Commute', 2], ['Watch TV', 2], ['Sleep', 7]]
+    render template: "chart", model: ["myDailyActivitiesColumns": myDailyActivitiesColumns,
+    "myDailyActivitiesData": myDailyActivitiesData]
+  }
+}
+----
+
+
+[source, groovy]
+.Template (`grails-app/views/visualization/_chart.gsp`)
+----
+<div id="piechart"></div>
+<gvisualization:pieCoreChart dynamicLoading="${true}" elementId="piechart" title="My Daily Activities"
+width="${450}" height="${300}" columns="${myDailyActivitiesColumns}" data="${myDailyActivitiesData}"/>
+----
+

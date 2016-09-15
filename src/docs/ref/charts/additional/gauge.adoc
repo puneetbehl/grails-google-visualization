@@ -1,0 +1,23 @@
+[[gauge]]
+=== Gauge
+
+[source, groovy]
+.VisualizationController.groovy
+----
+class VisualizationController {
+  def gauge() {
+   List systemPerformanceColumns = [['string', 'Label'], ['number', 'Value']]
+   List systemPerformanceData = [['Memory', 80], ['CPU', 55], ['Network', 68]]
+   render template: "gauge", model: ["systemPerformanceColumns": systemPerformanceColumns, "systemPerformanceData": systemPerformanceData]
+  }
+}
+----
+
+[source, groovy]
+._gauge.gsp
+----
+<gvisualization:gauge elementId="gauge" width="${400}" height="${120}" redFrom="${90}" redTo="${100}" yellowFrom="${75}" yellowTo="${90}" minorTicks="${5}" columns="${systemPerformanceColumns}" data="${systemPerformanceData}" />
+
+
+<div id="gauge"></div>
+----

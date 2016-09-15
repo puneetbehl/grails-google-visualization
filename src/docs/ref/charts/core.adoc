@@ -1,0 +1,22 @@
+[[core]]
+== Core Chart
+
+include::core/pieChart.adoc[]
+
+include::core/barChart.adoc[]
+
+include::core/bubbleChart.adoc[]
+
+include::core/columnChart.adoc[]
+
+include::core/areaChart.adoc[]
+
+include::core/lineChart.adoc[]
+
+include::core/scatterChart.adoc[]
+
+include::core/steppedAreaChart.adoc[]
+
+include::core/candlestickChart.adoc[]
+
+include::core/comboChart.adoc[]

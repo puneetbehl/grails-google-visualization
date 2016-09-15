@@ -1,4 +1,56 @@
 [[charts]]
 == Charts
 
-include::charts/pieCoreChart.adoc[]
+include::charts/geoChartNote.adoc[]
+
+// Core Charts
+
+include::charts/core/pieChart.adoc[]
+
+include::charts/core/barChart.adoc[]
+
+include::charts/core/bubbleChart.adoc[]
+
+include::charts/core/columnChart.adoc[]
+
+include::charts/core/areaChart.adoc[]
+
+include::charts/core/lineChart.adoc[]
+
+include::charts/core/scatterChart.adoc[]
+
+include::charts/core/steppedAreaChart.adoc[]
+
+include::charts/core/candlestickChart.adoc[]
+
+include::charts/core/comboChart.adoc[]
+
+// Additional Charts
+
+include::charts/additional/gauge.adoc[]
+
+include::charts/additional/table.adoc[]
+
+include::charts/additional/map.adoc[]
+
+include::charts/additional/annotatedTimeLine.adoc[]
+
+include::charts/additional/annotationChart.adoc[]
+
+include::charts/additional/orgChart.adoc[]
+
+include::charts/additional/intensityMap.adoc[]
+
+include::charts/additional/geoMap.adoc[]
+
+include::charts/additional/geoChart.adoc[]
+
+include::charts/additional/motionChart.adoc[]
+
+include::charts/additional/treeMap.adoc[]
+
+include::charts/additional/timeLine.adoc[]
+
+include::charts/additional/calendarChart.adoc[]
+
+include::charts/core/dataTableRole.adoc[]

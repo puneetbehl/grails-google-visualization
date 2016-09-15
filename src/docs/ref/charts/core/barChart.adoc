@@ -1,0 +1,24 @@
+[[barChart]]
+=== Bar Chart
+
+[source,groovy]
+.VisualizationController.groovy
+----
+class VisualizationController {
+  def barChart() {
+    List companyPerformanceColumns = [['string', 'Year'], ['number', 'Sales'], ['number', 'Expenses']]
+    List companyPerformanceData = [['2004', 1000, 400], ['2005', 1170, 460], ['2006', 660, 1120], ['2007', 1030, 540]]
+    render template: "barChart", model: ["companyPerformanceColumns": companyPerformanceColumns, "companyPerformanceData": companyPerformanceData]
+  }
+}
+----
+
+
+[source,groovy]
+._barChart.gsp
+----
+ <gvisualization:barCoreChart elementId="barchart" title="Company Performance" width="${400}" height="${240}" vAxis="${[title: 'Year', titleColor: 'red']}" columns="${companyPerformanceColumns}" data="${companyPerformanceData}" />
+ 
+ 
+ <div id="barchart"></div>
+----

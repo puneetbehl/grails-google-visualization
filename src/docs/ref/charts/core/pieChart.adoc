@@ -1,9 +1,8 @@
 [[pieChart]]
 === Pie Chart
 
-.Controller
-
 [source,groovy]
+.VisualizationController.groovy
 ----
 class VisualizationController {
   def pieChart() {
@@ -15,13 +14,14 @@ class VisualizationController {
 }
 ----
 
-.GSP
 
 [source,groovy]
+._pieChart.gsp
 ----
 
-<gvisualization:pieCoreChart elementId="piechart" title="My Daily Activities" width="${450}" height="${300}"
-columns="${myDailyActivitiesColumns}" data="${myDailyActivitiesData}" />
+<gvisualization:pieCoreChart elementId="piechart" title="My Daily Activities" width="${450}" height="${300}" columns="${myDailyActivitiesColumns}" data="${myDailyActivitiesData}" />
+
+
 <div id="piechart"></div>
 
 ----

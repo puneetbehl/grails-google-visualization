@@ -1,0 +1,23 @@
+[[motionChart]]
+=== Motion Chart
+
+[source, groovy]
+.VisualizationController.groovy
+----
+class VisualizationController {
+  def motionChart() {
+   List fruitColumns = [['string', 'Fruit'], ['date', 'Date'], ['number', 'Sales'], ['number', 'Expenses'], ['string', 'Location']]
+   List fruitData = [['Apples', DateUtil.createDate(1988, 0, 1), 1000, 300, 'East'], ['Oranges', DateUtil.createDate(1988, 0, 1), 1150, 200, 'West'], ['Bananas', DateUtil.createDate(1988, 0, 1), 300, 250, 'West'], ['Apples', DateUtil.createDate(1989, 6, 1), 1200, 400, 'East'], ['Oranges', DateUtil.createDate(1989, 6, 1), 750, 150, 'West'], ['Bananas', DateUtil.createDate(1989, 6, 1), 788, 617, 'West']]
+   render template: "motionChart", model: ["fruitColumns": fruitColumns, "fruitData": fruitData]
+  }
+}
+----
+
+[source, groovy]
+._motionChart.gsp
+----
+<gvisualization:motionChart elementId="motionchart" columns="${fruitColumns}" data="${fruitData}" />
+
+
+<div id="motionchart"></div>
+----

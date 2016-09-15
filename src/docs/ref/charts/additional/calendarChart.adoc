@@ -1,0 +1,23 @@
+[[calendarChart]]
+=== Calendar Chart
+
+[source, groovy]
+.VisualizationController.groovy
+----
+class VisualizationController {
+  def calendarChart() {
+   List calendarColumns = [['date', 'Date'], ['number', 'Won/Loss']]
+   List calendarData = [[DateUtil.createDate(2012, 3, 13), 37032], [DateUtil.createDate(2012, 3, 14), 38024], [DateUtil.createDate(2012, 3, 15), 38024], [DateUtil.createDate(2012, 3, 16), 38108], [DateUtil.createDate(2012, 3, 17), 38229]]
+   render template: "calendarChart", model: ["calendarColumns": calendarColumns, "calendarData": calendarData]
+  }
+}
+----
+
+[source, groovy]
+._calendarChart.gsp
+----
+<gvisualization:calendarChart elementId="calendarchart" columns="${calendarColumns}" data="${calendarData}" />
+
+
+<div id="calendarchart"></div>
+----

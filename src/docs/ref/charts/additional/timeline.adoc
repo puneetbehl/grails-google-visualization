@@ -1,0 +1,23 @@
+[[timeline]]
+=== Timeline
+
+[source, groovy]
+.VisualizationController.groovy
+----
+class VisualizationController {
+  def timeline() {
+   List timelineColumns = [['string', 'President'], ['date', 'Start'], ['date', 'End']]
+   List timelineData = [['Washington',  DateUtil.createDate(1789, 3, 29),  DateUtil.createDate(1797, 2, 3)], ['Adams',  DateUtil.createDate(1797, 2, 3),  DateUtil.createDate(1801, 2, 3)], ['Jefferson',  DateUtil.createDate(1801, 2, 3),  DateUtil.createDate(1809, 2, 3)]]
+   render template: "timeline", model: ["timelineColumns": timelineColumns, "timelineData": timelineData]
+  }
+}
+----
+
+[source, groovy]
+._timeline.gsp
+----
+<gvisualization:timeLine elementId="timeline" columns="${timelineColumns}" data="${timelineData}" />
+
+
+ <div id="timeline"></div>
+----

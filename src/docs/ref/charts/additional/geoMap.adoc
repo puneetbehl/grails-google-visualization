@@ -1,0 +1,23 @@
+[[geoMap]]
+=== Geo Map
+
+[source, groovy]
+.VisualizationController.groovy
+----
+class VisualizationController {
+  def geoMap() {
+   	def popularityColumns = [['string', 'Country'], ['number', 'Popularity']]
+	def popularityData = [['Germany', 200], ['United States', 300], ['Brazil', 400], ['Canada', 500], ['France', 600], ['RU', 700]]
+   	render template: "geoMap", model: ["popularityColumns": popularityColumns, "popularityData": popularityData]
+  }
+}
+----
+
+[source, groovy]
+._geoMap.gsp
+----
+<gvisualization:geoMap elementId="geomap" columns="${popularityColumns}" data="${popularityData}" />
+
+
+<div id="geomap"></div>
+----
