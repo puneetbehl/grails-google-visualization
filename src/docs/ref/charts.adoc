@@ -1,0 +1,4 @@
+[[charts]]
+== Charts
+
+include::charts/pieCoreChart.adoc[]

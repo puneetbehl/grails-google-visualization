@@ -1,0 +1,40 @@
+[[visualizations]]
+== Visualizations
+
+=== Available Visualizations
+
+Working examples for all available visualization can be found on this https://github.com/bmuschko/grails-google-visualization/blob/master/grails-app/views/index.gsp[GSP page] to this page on GitHub.
+
+==== Interactive Charts
+
+* http://code.google.com/apis/visualization/documentation/gallery/piechart.html[Pie Core Chart]: `<gvisualization:pieCoreChart/>`
+* http://code.google.com/apis/visualization/documentation/gallery/barchart.html[Bar Core Chart]: `<gvisualization:barCoreChart/>`
+* http://code.google.com/apis/chart/interactive/docs/gallery/bubblechart.html[Bubble Core Chart]: `<gvisualization:bubbleCoreChart/>`
+* http://code.google.com/apis/visualization/documentation/gallery/columnchart.html[Column Core Chart]: `<gvisualization:columnCoreChart/>`
+* http://code.google.com/apis/visualization/documentation/gallery/areachart.html[Area Core Chart]: `<gvisualization:areaCoreChart/>`
+* http://code.google.com/apis/visualization/documentation/gallery/linechart.html[Line Core Chart]: `<gvisualization:lineCoreChart/>`
+* http://code.google.com/apis/visualization/documentation/gallery/scatterchart.html[Scatter Core Chart]: `<gvisualization:scatterCoreChart/>`
+* http://code.google.com/apis/chart/interactive/docs/gallery/steppedareachart.html[Stepped Area Core Chart]: `<gvisualization:steppedAreaCoreChart/>`
+* http://code.google.com/apis/chart/interactive/docs/gallery/candlestickchart.html[Candlestick Core Chart]: `<gvisualization:candlestickCoreChart/>`
+* http://code.google.com/apis/chart/interactive/docs/gallery/combochart.html[Combo Core Chart]: `<gvisualization:comboCoreChart/>`
+* http://code.google.com/apis/visualization/documentation/gallery/gauge.html[Gauge]: `<gvisualization:gauge/>`
+* http://code.google.com/apis/visualization/documentation/gallery/table.html[Table]: `<gvisualization:table/>`
+* http://code.google.com/apis/visualization/documentation/gallery/map.html[Map]: `<gvisualization:map/>`
+* http://code.google.com/apis/visualization/documentation/gallery/annotatedtimeline.html[Annotated Time Line]: `<gvisualization:annotatedTimeLine/>`
+* http://code.google.com/apis/visualization/documentation/gallery/orgchart.html[Organizational Chart]: `<gvisualization:orgChart/>`
+* http://code.google.com/apis/visualization/documentation/gallery/intensitymap.html[Intensity Map]: `<gvisualization:intensityMap/>`
+* http://code.google.com/apis/visualization/documentation/gallery/geomap.html[Geo Map]: `<gvisualization:geoMap/>`
+* http://code.google.com/apis/chart/interactive/docs/gallery/geochart.html[Geo Chart]: `<gvisualization:geoChart/>`
+* http://code.google.com/apis/visualization/documentation/gallery/motionchart.html[Motion Chart]: `<gvisualization:motionChart/>`
+* http://code.google.com/apis/visualization/documentation/gallery/treemap.html[Tree Map]: `<gvisualization:treeMap/>`
+* https://developers.google.com/chart/interactive/docs/gallery/timeline[Timeline]: `<gvisualization:timeLine/>`
+* https://developers.google.com/chart/interactive/docs/gallery/calendar[Calendar Chart]: `<gvisualization:calendarChart/>`
+
+==== Deprecated Charts
+
+* http://code.google.com/apis/visualization/documentation/gallery/piechart_old.html[Pie Chart]: `<gvisualization:pieChart/>`
+* http://code.google.com/apis/visualization/documentation/gallery/barchart_old.html[Bar Chart]: `<gvisualization:barChart/>`
+* http://code.google.com/apis/visualization/documentation/gallery/columnchart_old.html[Column Chart]: `<gvisualization:columnChart/>`
+* http://code.google.com/apis/visualization/documentation/gallery/areachart_old.html[Area Chart]: `<gvisualization:areaChart/>`
+* http://code.google.com/apis/visualization/documentation/gallery/linechart_old.html[Line Chart]: `<gvisualization:lineChart/>`
+* http://code.google.com/apis/visualization/documentation/gallery/scatterchart_old.html[Scatter Chart]: `<gvisualization:scatterChart/>`

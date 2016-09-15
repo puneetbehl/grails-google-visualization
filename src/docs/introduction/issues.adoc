@@ -1,0 +1,4 @@
+[[issues]]
+=== Issues
+
+The old http://jira.grails.org/browse/GPGOOGLEVISUALIZATIONAPI[JIRA] links for Grails are not working anymore, so please ignore the issues links in documentation. Also, all issues must be reported to https://github.com/bmuschko/grails-google-visualization/issues[GitHub Issues].

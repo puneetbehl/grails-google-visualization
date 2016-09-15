@@ -1,0 +1,20 @@
+[[installation]]
+=== Installation
+
+==== For Grails 3.x
+
+Add the following dependency under `build.gradle`:
+
+[source,groovy]
+----
+compile "org.grails.plugins:grails-google-visualization:2.0"
+----
+
+==== For Grails 2.x
+
+Add the following plugin under plugins in BuildConfig.groovy:
+
+[source,groovy]
+----
+compile ":google-visualization:1.0.1"
+----

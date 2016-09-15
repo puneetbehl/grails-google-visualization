@@ -1,0 +1,19 @@
+[[acknowledgements]]
+=== Acknowledgments
+
+Many thanks to all the users who reported issues and sent pull requests.
+
+#### Authors and Contributors
+
+* https://github.com/bmuschko[Benjamin Muschko]
+* https://github.com/aruizca[Angel Ruiz]
+* https://github.com/mansi90[Mansi Arora]
+* https://github.com/robertoschwald[Robert Oschwald]
+* https://github.com/meudaypratap[Uday Pratap Singh]
+* https://github.com/tcrossland[Tom Crossland]
+* https://github.com/sdonyh[Sdonyh]
+* https://github.com/anarcticpuffin[Ryan]
+* https://github.com/ionis[Lewis Norton]
+* https://github.com/zoran119[Zoran Stojakovic]
+* https://github.com/puneetbehl[Puneet Behl]
+* https://github.com/vmille[Vmille]

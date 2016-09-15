@@ -1,0 +1,9 @@
+[[features]]
+
+=== Features
+
+* Supports the following visualizations: Annotated Time Line, Area Chart, Bar Chart, Bubble Chart, Candlestick Chart, Column Chart, Combo Chart, Gauge, Geo Chart Geo Map, Intensity Map, Line Chart, Map, Motion Chart, Organizational Chart, Pie Chart, Scatter Chart, Stepped Area Chart, Table Chart, Time Line Chart and Tree Map. See the https://developers.google.com/chart/interactive/docs/gallery[gallery] for more information.
+* Implements redesigned charts (Area, Bar, Bubble, Candlestick, Column, Combo, Line, Pie, Scatter and Stepped Area Charts) from the previously known as "Core Chart package" as well as the deprecated versions.
+* Provides implementations for https://developers.google.com/chart/interactive/docs/gallery/table#Formatters[table formatters] TableArrowFormat, TableBarFormat, TableColorFormat, TableDateFormat, TableNumberFormat and TablePatternFormat.
+* Visualization https://developers.google.com/chart/interactive/docs/events[Event Handling].
+* Provides support for https://developers.google.com/chart/interactive/docs/roles[Data Tables Roles] (since version 1.0)

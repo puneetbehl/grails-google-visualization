@@ -1,0 +1,10 @@
+[[usage]]
+== Usage
+
+include::usage/installation.adoc[]
+
+include::usage/basicUsage.adoc[]
+
+include::usage/events.adoc[]
+
+include::usage/formatters.adoc[]

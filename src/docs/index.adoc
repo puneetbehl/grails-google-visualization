@@ -3,13 +3,13 @@ Benjamin Muschko
 
 :google-visualization: https://developers.google.com/chart/interactive/docs/reference
 
-//include::introduction.adoc[]
-//
-//include::persistence.adoc[]
-//
-//include::databinding.adoc[]
-//
-//include::tags.adoc[]
+include::introduction.adoc[]
+
+include::usage.adoc[]
+
+include::ref/charts.adoc[]
+
+include::visualizations.adoc[]
 //
 //include::scaffolding.adoc[]
 //

@@ -1,0 +1,16 @@
+[[introduction]]
+== Introduction
+
+This plugin provides a taglib for the interactive charts of the https://developers.google.com/chart/[Google Visualization API].
+
+In addition to this document, you may want to read the Google Visualization documentation https://developers.google.com/chart/[here].
+
+include::introduction/features.adoc[]
+
+include::introduction/issues.adoc[]
+
+include::introduction/releaseNotes.adoc[]
+
+include::introduction/acknowledgements.adoc[]
+
+include::introduction/license.adoc[]

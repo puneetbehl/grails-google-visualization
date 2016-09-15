@@ -1,0 +1,105 @@
+[[releaseNotes]]
+
+=== Release Notes
+
+.October 09, 2015 (version 2.0)
+* Provides support for Grails 3.x
+
+.January 07, 2015 (version 1.0.1)
+* Added "title" config option to Calendar chart. Although it does not appear in the API documentation, the examples show that it is available.
+
+.January 04, 2015 (version 1.0)
+* Updates the configuration options to the current Google Charts API. Important! This might introduce some backward compatibility issues as some parameters have been removed, replaced or have changed type. Eg: tooltipText and tooltipTextStyle replaced by tooltip of type object, ... (This will be noted in the README.md file and the https://github.com/bmuschko/grails-google-visualization/wiki/changelog[changelog wiki page])
+* Removed support for Image Charts as they are no longer part of the Google Charts API
+* Now the object type can be declared using the Map notation as the preferred option instead of using an Expando object declaration. It still can be used though to avoid backward compatibility issues. Example: `legend="${[position: 'top', alignment: 'center']}"` instead of: `legend="${new Expando(position: 'top', alignment: 'center')}"`
+* Replaced scriptlets with EL expressions in javascript template.
+* Fixes issue https://github.com/bmuschko/grails-google-visualization/issues/15[#15]
+* Other minor fixes and tasks
+
+.December 11, 2014 (version 0.7.2)
+* Fixes bug https://github.com/bmuschko/grails-google-visualization/issues/32[#32]: the "error" event handling should be declared before drawing the chart and not after.
+
+.November 28, 2014 (version 0.7.1)
+* Fixes bugs https://github.com/bmuschko/grails-google-visualization/issues/28[#28] and https://github.com/bmuschko/grails-google-visualization/issues/24[#24]: Grails 2.3+ XSS prevention mechanism was HTML encoding the javascript output of the taglib and therefore breaking it. There is also a reference in JIRA: [GPGOOGLEVISUALIZATIONAPI-14])
+
+.April 30, 2014 (version 0.7)
+* Fix ObjectRenderer to properly filter class and metaClass properties (see https://github.com/bmuschko/grails-google-visualization/pull/23[pull request #23]).
+* Add support for Timeline and Calendar charts (see https://github.com/bmuschko/grails-google-visualization/pull/22[pull request #22]).
+
+.May 9, 2013 (version 0.6.2)
+* Enable use of candlestick options (see https://github.com/bmuschko/grails-google-visualization/pull/12[pull request 12]).
+
+.February 3, 2013 (version 0.6.1)
+* Fixed HTML codec issues (see https://github.com/bmuschko/grails-google-visualization/pull/11[pull request 11]).
+
+.November 11, 2012 (version 0.6)
+* Internal cleanup (see https://github.com/bmuschko/grails-google-visualization/pull/10[pull request 10]).
+
+.October 14, 2012 (version 0.5.6)
+* Added missing bar attribute to several charts.
+
+.August 18, 2012 (version 0.5.5)
+* Support forceIFrame parameter(see http://jira.grails.org/browse/GPGOOGLEVISUALIZATIONAPI-12[GPGOOGLEVISUALIZATIONAPI-12]).
+
+.August 12, 2012 (version 0.5.4)
+* Support vAxes parameter (see http://jira.grails.org/browse/GPGOOGLEVISUALIZATIONAPI-11[GPGOOGLEVISUALIZATIONAPI-11]).
+
+.July 8, 2012 (version 0.5.3)
+* Support for pattern property in NumberFormatter (see http://jira.grails.org/browse/GPGOOGLEVISUALIZATIONAPI-10[GPGOOGLEVISUALIZATIONAPI-10]).
+
+.May 26, 2012 (version 0.5.2)
+* Added isStacked attribute for ComboCoreChart.
+
+.May 17, 2012 (version 0.5.1)
+* Provided support for marker style in GeoChart (see http://jira.grails.org/browse/GPGOOGLEVISUALIZATIONAPI-7[GPGOOGLEVISUALIZATIONAPI-7])
+* Upgrade to Grails 2.0.1 and Release plugin 2.0.0.
+
+.January 29, 2012 (version 0.5)
+* Added new visualizations: Bubble Chart, Stepped Area Chart.
+* Allow all visualizations to use String data type for the attributes height and width (see http://jira.grails.org/browse/GPGOOGLEVISUALIZATIONAPI-5[GPGOOGLEVISUALIZATIONAPI-5]).
+* Allow all visualizations to use formatters (see http://jira.grails.org/browse/GPGOOGLEVISUALIZATIONAPI-6[GPGOOGLEVISUALIZATIONAPI-6]).
+* Provided taglib for Google JavaScript API import.
+
+.December 3, 2011 (version 0.4.3)
+* Ready event has to be defined before calling draw on visualization (see http://jira.grails.org/browse/GPGOOGLEVISUALIZATIONAPI-3[GPGOOGLEVISUALIZATIONAPI-3]).
+
+.October 2, 2011 (version 0.4.2)
+* Ready event has to be defined before calling draw on visualization (see http://jira.grails.org/browse/GPGOOGLEVISUALIZATIONAPI-2[GPGOOGLEVISUALIZATIONAPI-2]).
+
+.August 27, 2011 (version 0.4.1)
+* Updated core chart parameters (see Google's http://code.google.com/apis/chart/interactive/docs/release_notes.html#72011[release notes]).
+
+.May 20, 2011 (version 0.4)
+* Added new visualizations: Geo Chart, Candlestick Chart and Combo Chart.
+* Exposed visualization parameter to set API version.
+
+.May 17, 2011 (version 0.3.1)
+* Updated core chart parameters (see Google's http://code.google.com/apis/chart/interactive/docs/release_notes.html#v03212011[release notes]).
+
+.March 20, 2011 (version 0.3)
+* Updated core chart parameters (see Google's http://code.google.com/apis/visualization/documentation/release_notes.html#v01172011[release notes]).
+* Added Candlestick image chart.
+
+.November 10, 2010 (version 0.2.4)
+* Updated core chart parameters (see Google's http://code.google.com/apis/visualization/documentation/release_notes.html#v11072010[release notes]).
+* Improved String data type handling (see http://jira.grails.org/browse/GPGOOGLEVISUALIZATIONAPI-1[GPGOOGLEVISUALIZATIONAPI-1]).
+
+.August 26, 2010 (version 0.2.3)
+* Updated core chart parameters (see Google's http://code.google.com/apis/visualization/documentation/release_notes.html#08112010[release notes]).
+
+.August 4, 2010 (version 0.2.2)
+* Exposed visualization data JavaScript object (google.visualization.DataTable).
+* Bugfixes: String parameters and cell labels needed to be escaped.
+
+.July 8, 2010 (version 0.2.1)
+* Added onmouseover/onmouseout events to treemap.
+* Support for http://code.google.com/apis/ajax/documentation/#Dynamic[dynamic loading].
+
+.June 5, 2010 (version 0.2)
+* Added new visualization Tree Map.
+* Added image charts: Pie Chart, Bar Chart, Area Chart, Line Chart and Sparkline.
+* Map now provides the Terrain type.
+* Support for http://code.google.com/apis/visualization/documentation/reference.html#cell_object[cell object].
+
+.May 27, 2010 (version 0.1)
+* Initial version.

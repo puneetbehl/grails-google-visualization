@@ -1,0 +1,39 @@
+[[formatters]]
+=== Formatters
+
+You can apply formatters to all visualizations using the "formatters" taglib attribute as the underlying implementation is a https://developers.google.com/chart/interactive/docs/reference?csw=1#DataTable[google.visualization.DataTable].
+
+However, using formatters makes the most sense for the Table visualization.
+
+A full set of examples can be found on this https://github.com/bmuschko/grails-google-visualization/blob/master/grails-app/views/formatter/index.gsp[GSP page].The value you have to pass in is a list of classes implementing the `org.grails.plugins.google.visualization.formatter.Formatter` interface. The implementations you can apply are the following:
+
+[source,groovy]
+----
+org.grails.plugins.google.visualization.formatter.PatternFormatter
+org.grails.plugins.google.visualization.formatter.NumberFormatter
+org.grails.plugins.google.visualization.formatter.DateFormatter
+org.grails.plugins.google.visualization.formatter.ColorRange
+org.grails.plugins.google.visualization.formatter.ColorFormatter
+org.grails.plugins.google.visualization.formatter.BarFormatter
+org.grails.plugins.google.visualization.formatter.ArrowFormatter
+----
+
+.Example:
+
+[source,groovy]
+----
+<%@ page import="org.grails.plugins.google.visualization.formatter.BarFormatter" %>
+<%
+def departmentRevenueColumns = [['string', 'Department'], ['number', 'Revenues']]
+def departmentRevenueData = [['Shoes', 10700], ['Sports', -15400], ['Toys', 12500], ['Electronics', -2100],
+['Food', 22600], ['Art', 1100]]
+def barFormatter = new BarFormatter(1)
+barFormatter.width = 120
+def barFormatters = [barFormatter]
+%>
+
+<gvisualization:table elementId="barformat_div" allowHtml="${true}" showRowNumber="${true}"
+columns="${departmentRevenueColumns}" data="${departmentRevenueData}" formatters="${barFormatters}"/>
+<div id="barformat_div"></div>
+----
+

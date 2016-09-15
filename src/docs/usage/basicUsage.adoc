@@ -1,0 +1,25 @@
+[[basicUsage]]
+=== Basic usage
+
+* The page you want to use the visualization in has to import the http://code.google.com/apis/visualization/documentation/using_overview.html#Including_the_Visualization_API_on_Your_Page[Google visualization API JavaScript library]. You can do so by using the taglib `<gvisualization:apiImport/>` or by importing it using the HTML script tag.
+
+[source,javascript]
+----
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+----
+
+* All visualizations in the taglib use the namespace __*gvisualization*__.
+* Apart from the configuration options specific to a visualization (see visualization specifications) there are multiple attributes that you have to set for your visualization.
+ * *__name__* (optional) - JavaScript variable name for visualization object (defaults to "visualization").
+ * *__version__* (optional) - API version for visualization object (defaults to "1").
+ * *__elementId__* (required) - HTML div ID used to render visualization.
+ * *__dynamicLoading__* (optional) - Renders visualization over http://code.google.com/apis/ajax/documentation/#Dynamic[dynamic loading] - required when rendered in AJAX response (defaults to false).
+ * *__language__* (optional) - Forces http://code.google.com/apis/visualization/documentation/using_overview.html#localization[localized version] of visualization. The language property is a two-letter ISO 639-1 language code.
+ * *__columns__* (required) - List of column data types and names to be displayed in the visualization.
+ * *__data__* (required) - List of data to be displayed for columns.
+ - To express objects you use the Map notation inside an EL expression. Eg:
+ [source,groovy]
+ ----
+ legend="${[position: 'top', alignment: 'center']}"
+ ----
+ - If your data requires the usage of the http://code.google.com/apis/visualization/documentation/reference.html#cell_object[cell object] you can import and populate the class `org.grails.plugins.google.visualization.data.Cell`.

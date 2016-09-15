@@ -1,0 +1,6 @@
+= Quick Reference
+:toc: right
+:toc-title: Quick Reference
+
+include::charts.adoc[]
+
